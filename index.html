@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+    <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <!-- CSS -->
+
+
+    <!-- Hoja de Estilo -->
     <link rel="stylesheet" href="style.css">
-    <!-- Icono -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="imgs/codoacodo.png" type="image/x-icon">
 
     <title>BuenosAires conferencia</title>
@@ -21,7 +23,7 @@
                 <img src="imgs/codoacodo.png" alt="Codo a codo" class="logo-logo">
                 <h2 class="logo-text">Conf Bs As</h2>
             </div>
-            
+
             <div class="menu-btn icon">
                 <div class="menu-btn_burger"></div>
             </div>
@@ -32,13 +34,14 @@
                 <a href="#oradores">Los oradores</a>
                 <a href="#img">El lugar y la fecha</a>
                 <a href="#convertir-orador">Conviértete en orador</a>
-                <a class="verde">Comprar tickets</a>
+                <a href="#comprarTickets" class="verde">Comprar tickets</a>
             </div>
 
         </div>
     </div>
 
 
+<!-- Conferencia -->
 
 <div id="conferencia" class="container-fliud comprar-tickets">
          <img class="img-fluid palacio" src="imgs/ba1.jpg" alt="palacio de aguas corrientes">
@@ -47,14 +50,14 @@
                 <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad del conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores del primer nivel que tenemos para ti. Te esperamos!</p>
                 <div class="boton-ticket">
                 <button class="boton orador">Quiero ser orador</button>
-                <button class="boton tickets">Comprar tickets</button>
+                <button class="boton tickets" id="comprarTickets">Comprar tickets</button>
                 </div>
         </div>
 </div>
 
 
 
-<!-- Oradores -->
+<!-- Tarjetas de los oradores -->
 <div id="box-moderador" >
 <section id="oradores" class="oradores-tag">
     <br>
@@ -72,7 +75,7 @@
                 <button class="boton1">JavaScript</button>
                 <button class="boton2">React</button>
             </div>
-    
+
             <label>Steve Jobs</label>
             <br>
             <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
@@ -88,7 +91,7 @@
                 <button class="boton1">JavaScript</button>
                 <button class="boton2">React</button>
             </div>
-    
+
             <label>Bill Gates</label>
             <br>
             <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
@@ -104,7 +107,7 @@
                 <button class="boton3">Negocios</button>
                 <button class="boton4">Start-ups</button>
             </div>
-    
+
             <label>Ada Lovelace</label>
             <br>
             <p class="para-orador">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione exercitationem repellendus magnam a voluptas tempora, quod voluptate cum inventore neque?</p>
@@ -114,7 +117,7 @@
 </section>
 </div>
 
-<div class="images-Octubre" >
+<div class="images-Octubre" id="images-Octubre" >
     <div id="img">
         <img src="imgs/honolulu.jpg" >
     </div>
@@ -129,12 +132,12 @@
 
 <div class="ser-orador" id="convertir-orador">
     <form class="formulario">
-        <div class="texto-cabecera"> 
-        <p>CONVIÉRTETE EN UN</p> 
+        <div class="texto-cabecera">
+        <p>CONVIÉRTETE EN UN</p>
         <h2>ORADOR</h2>
         <label class="texto-dark"> Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</label>
-        </div> 
-        
+        </div>
+
         <div class="nombres-orador">
             <input class="name" type="text" placeholder="Nombre">
             <input class="name" type="text" placeholder="Apellido">
@@ -146,6 +149,82 @@
     </form>
 </div>
 
+
+
+
+<div id="displayTicket"class="hidden">
+<div id="ventaTicket">
+        <div class="contenedorVenta">
+          <div class="cat">
+            <div class="estudiante">
+                <p class="head"> <strong id="estudiante">Estudiante</strong></p>
+                <p>Tiene un descuento</p>
+                <strong value=80 class="estudianteValor">80%</strong>
+                <p class="foot">* presentar documentación</p>
+            </div>
+            <div class="trainee">
+              <p class="head"> <strong id="trainee">Trainee</strong></p>
+              <p>Tiene un descuento</p>
+              <strong value=50 class="traineeValor">50%</strong>
+              <p class="foot">* presentar documentación</p>
+            </div>
+            <div class="junior">
+              <p class="head"><strong id="junior">Junior</strong></p>
+              <p>Tiene un descuento</p>
+              <strong value=15 class="juniorValor">15%</strong>
+              <p class="foot">* presentar documentación</p>
+            </div>
+          </div>
+
+        <div>
+
+          <div class="formularioVenta">
+              <div class="texto-cabecera">
+              <p class="foot">VENTA</p>
+              <h2 value=200 class="valorTicket" >VALOR DE TICKET $200</h2>
+              </div>
+
+
+                <div class="namesContainer">
+                  <input class="nameNombre" type="text" placeholder="Nombre" required>
+                  <input class="nameLast" type="text" placeholder="Apellido" required>
+                </div>
+                  <input class="nameCorreo" type="text" placeholder="Correo">
+
+
+
+              <div class="tagContainer">
+                <div class="tags">
+                    <label class="tagLabel" for='nombre'> Cantidad</label>
+                    <input id="nombre" class="nameCant" type="number" min="1"  placeholder="Cantidad" required>
+                </div>
+
+                <div class="tags">
+                    <label class="tagLabel" for="categoriasLista">Categoria</label>
+                    <input id="categoriasLista" class="nameCat" placeholder='Click sobre Categoria' list="categorias" >
+                    <datalist id="categorias">
+                          <option value="Estudiante">
+                          <option value="Trainee">
+                          <option value="Junior">
+                    </datalist>
+                </div>
+              </div>
+
+              <div id="totalPagar" class="hidden">
+              </div>
+
+                <div class="btnsTicket">
+                <button class="borrar">Borrar</button>
+                <button class="resumen">Resumen</button>
+                </div>
+          </div>
+
+      </div>
+
+  </div>
+
+  </div>
+</div>
 
 <footer>
         <div class="foot">Preguntas frecuentes</div>
@@ -160,6 +239,3 @@
 <script src="code.js"></script>
 </body>
 </html>
-
-
-
